@@ -1,0 +1,21 @@
+<web-app>
+    <servlet>
+        <servlet-name>DbCon</servlet-name>
+        <servlet-class>DbCon</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DbCon</servlet-name>
+        <url-pattern>/DbCon</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>booksServlet</servlet-name>
+    <servlet-class>booksServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>booksServlet</servlet-name>
+    <url-pattern>/booksServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
