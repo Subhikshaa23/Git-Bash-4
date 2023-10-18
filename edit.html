@@ -1,0 +1,68 @@
+<!-- <h1>Success!</h1> -->
+<html>
+    <head>
+        <title>Edit</title>
+        <style>
+            body{
+                margin-top: 70px;
+            }
+            .head{
+                text-align: center;
+            }
+
+            .edit-form{
+                text-align: left;
+                width: 26%;
+                margin: 0 auto;
+            }
+
+            .btn{
+                margin: 0 35%;
+                padding: 5px 50px;
+            }
+
+            .success-message-edit {
+            color: green;
+            display: none;
+            text-align: center;
+            }
+
+            .success-message-edit:target {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="head">EDIT BOOK INFORMATION</h1>
+        <br><br>
+
+        <a class="success-message-edit" id="successMessage1" href="#successMessage1">
+            Record edited successfully
+        </a>
+        <!-- <a class="error-message" class="head" id="successMessage" href="#successMessage">
+            Record not inserted successfully
+        </a> -->
+        <br><br>
+        <form action="Edit" method="post" >
+            <div class="edit-form">
+                ID: <br><input type="text" size="50" name="editVal"><br><br>
+                Title: <br><input type="text" size="50" name="title"><br><br>
+                Author: <br><input type="text" size="50" name="author"><br><br>
+                Publisher: <br><input type="text" size="50" name="publisher"><br><br>
+                Edition: <br><input type="text" size="50" name="edition"><br><br>
+                Price: <br><input type="text" size="50" name="price"><br><br>
+                <br><br>
+                <input class="btn" type="submit" value="Update">
+                <!-- <input class="btn" type="reset" value=" B"> -->
+                <!-- <a href="DbCon" >Back</a> -->
+                <!-- <button><a href="/DbCon">Back</a></button> -->
+                <!-- <i class="fa fa-undo" aria-hidden="true"></i> -->
+            </div>
+        </form> 
+            
+            
+            
+       
+    </body>
+</html>
