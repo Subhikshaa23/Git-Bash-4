@@ -10,12 +10,32 @@
     </servlet-mapping>
 
     <servlet>
-    <servlet-name>booksServlet</servlet-name>
-    <servlet-class>booksServlet</servlet-class>
+    <servlet-name>Insert</servlet-name>
+    <servlet-class>Insert</servlet-class>
     </servlet>
 
     <servlet-mapping>
-    <servlet-name>booksServlet</servlet-name>
-    <url-pattern>/booksServlet</url-pattern>
+    <servlet-name>Insert</servlet-name>
+    <url-pattern>/Insert</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>Delete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/Delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>Edit</servlet-name>
+    <servlet-class>Edit</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>Edit</servlet-name>
+    <url-pattern>/Edit</url-pattern>
     </servlet-mapping>
 </web-app>
