@@ -1,9 +1,7 @@
 // package dbconnection;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ResourceBundle;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -58,7 +56,7 @@ public class DbCon extends HttpServlet {
                 out.println("td, th{padding: 10px 15px;}");
                 out.println("table{margin: auto auto;}");
                 out.println("body{text-align: center; padding: auto 50px}");
-                out.println(".options{display: inline-block; width: 25%; float: right;}");
+                out.println(".options{display: inline-block; width: 30%; float: right;}");
                 out.println(".container{ width: 50%; margin: 50px auto;}");
                 out.println("</style>");
 

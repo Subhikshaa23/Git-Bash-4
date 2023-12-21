@@ -1,220 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Stocks</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        body {
-            margin-top: 110px;
-            position: relative;
-            background-color: #3e3e3e;
-            color: #ecf0f1;
-            font-family: 'Merienda'; 
-        }
+<!-- <h1>Success!</h1> -->
+<html>
+    <head>
+        <title>Insert</title>
+        <style>
+            body{
+                margin-top: 70px;
+            }
+            .head{
+                text-align: center;
+            }
 
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
+            .insert-form{
+                text-align: left;
+                width: 26%;
+                margin: 0 auto;
+            }
 
-        .head {
-            text-align: left;
-            color: #ffffff;
-            margin-bottom: 20px;
-            font-size: 1.5rem; 
-            font-weight: 100;
-        }
+            .btn{
+                margin: 0 35%;
+                padding: 5px 50px;
+            }
 
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            z-index: 1;
-        }
+            .success-message {
+            color: green;
+            display: none;
+            text-align: center;
+            }
 
-        form {
-            width: 100%;
-            max-width: 500px;
-            background-color: #3e3e3e;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            position: relative;
-            z-index: 2;
-        }
+            .success-message:target {
+                display: block;
+            }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            background-color: #3e3e3e;
-            color: #ecf0f1;
-            border: 1px solid #8e44ad;
-            border-radius: 8px;
-        }
+        </style>
+    </head>
+    <body>
+        <h1 class="head">ADD BOOK</h1>
+        <br><br>
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 15px;
-            box-sizing: border-box;
-            background-color: #8e44ad;
-            color: #ecf0f1;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #7d3c98;
-        }
-    </style>
-</head>
-<body>
-    <!-- Particle.js Background -->
-    <div id="particles-js"></div>
-
-    <div class="container">
-        <form class="head" action="Insert" method="post">
-            <h1 class="head">STOCK INVENTORY MANAGEMENT SYSTEM</h1><hr>
-            <h2 class="head">ADD STOCKS</h2>
-
-            <label for="productName">Product Name:</label>
-            <input type="text" name="productName" required>
-
-            <label for="supplier">Supplier:</label>
-            <input type="text" name="supplier" required>
-
-            <label for="currentStock">Current Stock:</label>
-            <input type="text" name="currentStock" required>
-
-            <label for="reorderLevel">Reorder Level:</label>
-            <input type="text" name="reorderLevel" required>
-
-            <label for="unitPrice">Unit Price:</label>
-            <input type="text" name="unitPrice" required>
-
-            <input type="submit" value="Add Stock">
-        </form>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Particle.js Configuration
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 150,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    },
-                    polygon: {
-                        nb_sides: 5
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "repulse"
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push"
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3
-                    },
-                    repulse: {
-                        distance: 200
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                    remove: {
-                        particles_nb: 2
-                    }
-                }
-            },
-            retina_detect: true
-        });
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+        <a class="success-message" id="successMessage" href="#successMessage">
+            Record inserted successfully
+        </a>
+        <!-- <a class="error-message" id="successMessage" href="#successMessage">
+            Record not inserted successfully
+        </a> -->
+        <br><br>
+        <form action="Insert" method="post" >
+            <div class="insert-form">
+                Title: <br><input type="text" size="50" name="title"><br><br>
+                Author: <br><input type="text" size="50" name="author"><br><br>
+                Publisher: <br><input type="text" size="50" name="publisher"><br><br>
+                Edition: <br><input type="text" size="50" name="edition"><br><br>
+                Price: <br><input type="text" size="50" name="price"><br><br>
+                <br><br>
+                <input class="btn" type="submit" value="Add">
+                <!-- <input class="btn" type="reset" value=" B"> -->
+                <!-- <a href="DbCon" >Back</a> -->
+                <!-- <button><a href="/DbCon">Back</a></button> -->
+                <!-- <i class="fa fa-undo" aria-hidden="true"></i> -->
+            </div>
+        </form> 
+            
+            
+            
+       
+    </body>
 </html>
